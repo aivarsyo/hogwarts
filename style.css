@@ -1,0 +1,264 @@
+.hide {
+    display: none;
+  }
+  
+  @font-face {
+    font-family: harrypotter;
+    src: url(MagicSchoolOne.ttf);
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+  
+  
+  body {
+    background-image: url(images/background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+  
+  }
+  
+  h2 {
+    font-family: harrypotter;
+    font-size: 50px;
+    text-align: center;
+    color: #000;
+  }
+
+  h2:nth-of-type(1){
+      margin-bottom: 0;
+  }
+
+  h2:nth-of-type(2){
+    margin-top: 0;
+}
+  
+  .interactive{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  select,
+  button {
+    background-color: rgb(255, 255, 255, 0.9);
+    color: black;
+    border: none;
+    padding: 15px 9px;
+    cursor: pointer;
+    margin: 0 2px;
+    outline: none;
+    font-family: 'Chelsea Market', cursive;
+  }
+  button:hover,
+  select:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  button:disabled {
+    background-color: rgb(95, 13, 13);
+    cursor: default;
+    color: white;
+    border: none;
+  }
+  ul {
+      background-color: rgb(255, 255, 255, 0.7);
+    list-style-image: url("images/snitch2.png");
+    
+  }
+  li {
+    cursor: pointer;
+    margin: 10px;
+    font-family: 'Chelsea Market', cursive;
+    border-bottom: solid black;
+    transition: 0.2s;
+    font-size: 24px;
+  }
+  
+  li:hover {
+    color: rgb(88, 83, 168);
+    border-bottom: solid rgb(235, 111, 39);
+    border-radius: 10px;
+  }
+  
+  li h3.first-name,
+  li h3.last-name {
+    display: inline;
+  }
+  li > h3.house {
+    margin-bottom: 10px;
+    color: brown;
+  }
+
+  li > h3 {
+    pointer-events: none;
+  }
+  
+  .bg-modal {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+  }
+  
+  .modal-content {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 10% 10%;
+    padding: 1em 2em;
+    padding-top: 2em;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  #close {
+    border: none;
+    color: white;
+    background-color: rgb(243, 43, 43);
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+  }
+  
+  #close:hover {
+    color: rgb(0, 0, 0);
+    background-color: white;
+  }
+  
+  div.wrap-crest > img {
+    max-width: 100%;
+    
+  }
+  
+  .modalImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1em;
+  }
+  
+  .data > h3 {
+    margin: 17px 0;
+    font-family: 'Chelsea Market', cursive;
+    font-size: 24px;
+   
+  }
+  
+  .modal-inter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-inter button{
+      margin-bottom: 10px;
+      padding: 10px;
+      border: none;
+      color: black;
+      font-family: 'Chelsea Market', cursive;
+  }
+
+  h5 {
+    font-family: toxia;
+    font-size: 20px;
+    margin: 20px 0;
+    color: red;
+    transform: rotate(-5deg);
+  }
+  
+  #expellButton{
+    background-color: rgba(236, 135, 135, 0.87);
+  }
+  
+  #prefectButton{
+    background-color: #6beb91d7;
+  }
+ 
+  #prefectRevokeButton:hover{
+    background-color: #ecb939dc;
+  }
+  
+  #inquisitorialButton{
+    background-color: #a460e4d7;
+  }
+
+  .modal-inter > button:hover{
+    background-color: rgb(255, 255, 255, 0.7) !important;
+}
+  
+  @media only screen and (min-width: 1024px) {
+    main {
+      margin: 0 25%;
+    }
+  
+    .modal-content {
+      margin: 10% 25%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "images details" "buttons details";
+      grid-column-gap: 10%;
+    }
+    .modalImages {
+      grid-area: images;
+      margin: 0 auto;
+    }
+    .modal-inter {
+      grid-area: buttons;
+    }
+    .data {
+      grid-area: details;
+      margin: 0 auto;
+    }
+    button,
+    select {
+      font-size: 15px;
+    }
+  }
+
+  #expelledModal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #expelledModalContent{
+    background: rgb(255, 255, 255, 0.7);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    position: relative;
+  }
+
+  #expelledModalContent p{
+    font-size: 40px;
+    color: red;
+    font-family: 'Chelsea Market', cursive;
+  }
+  
